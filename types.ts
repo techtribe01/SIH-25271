@@ -1,4 +1,4 @@
-export type Page = 'home' | 'simulator' | 'analysis' | 'validation';
+export type Page = 'home' | 'simulator' | 'analysis' | 'validation' | 'policy';
 
 export type ToastType = 'success' | 'error';
 
@@ -11,4 +11,11 @@ export interface Results {
 
 export interface ScenarioData extends Results {
   tariff: number;
+}
+
+export interface Recommendation {
+  recommendedTariff: number;
+  rationale: string;
+  impact: Results;
+  nmeoAlignment: 'High' | 'Medium' | 'Low';
 }

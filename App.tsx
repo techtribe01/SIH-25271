@@ -4,6 +4,7 @@ import LandingPage from './pages/LandingPage';
 import SimulatorPage from './pages/SimulatorPage';
 import AnalysisPage from './pages/AnalysisPage';
 import ValidationPage from './pages/ValidationPage';
+import PolicyPage from './pages/PolicyPage';
 import NavigationBar from './components/Shared/NavigationBar';
 import Footer from './components/Footer';
 import Toast from './components/Shared/Toast';
@@ -80,6 +81,7 @@ const App: React.FC = () => {
           case '2': e.preventDefault(); handleSetPage('simulator'); break;
           case '3': e.preventDefault(); handleSetPage('analysis'); break;
           case '4': e.preventDefault(); handleSetPage('validation'); break;
+          case '5': e.preventDefault(); handleSetPage('policy'); break;
         }
       }
     };
@@ -114,6 +116,8 @@ const App: React.FC = () => {
         return <AnalysisPage setPage={handleSetPage} isTransitioning={isTransitioning} {...sharedState} />;
       case 'validation':
         return <ValidationPage setPage={handleSetPage} />;
+      case 'policy':
+        return <PolicyPage setPage={handleSetPage} {...sharedState} />;
       case 'home':
       default:
         return <LandingPage setPage={handleSetPage} />;

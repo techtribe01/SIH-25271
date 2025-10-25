@@ -11,6 +11,7 @@ const navLinks: { page: Page; label: string }[] = [
   { page: 'simulator', label: 'Simulator' },
   { page: 'analysis', label: 'Analysis' },
   { page: 'validation', label: 'Validation' },
+  { page: 'policy', label: 'Policy Assistant' },
 ];
 
 const NavigationBar: React.FC<NavigationBarProps> = ({ currentPage, setPage }) => {
