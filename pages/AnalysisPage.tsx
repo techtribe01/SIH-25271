@@ -5,6 +5,7 @@ import ScenarioComparisonChart from '../components/charts/ScenarioComparisonChar
 import TradeoffAnalysisChart from '../components/charts/TradeoffAnalysisChart';
 import ComparisonTable from '../components/analysis/ComparisonTable';
 import Spinner from '../components/simulator/Spinner';
+import StakeholderTable from '../components/analysis/StakeholderTable';
 
 interface AnalysisPageProps {
   setPage: (page: Page) => void;
@@ -48,8 +49,12 @@ const AnalysisPage: React.FC<AnalysisPageProps> = ({
           </div>
         </section>
 
-        <section>
+        <section className="mb-12">
           <ComparisonTable {...currentInputs} />
+        </section>
+
+        <section>
+          <StakeholderTable {...currentInputs} />
         </section>
       </div>
     </div>
